@@ -1,0 +1,46 @@
+.sub-nav {
+    display: grid;
+    gap: 16px;
+
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--footer-bg);
+    
+    color: var(--footer-text-color);
+    font-size: 16px;
+
+    a {
+        color: var(--footer-text-color);
+        transition: color 0.1s ease-in;
+
+        &:hover {
+            color: var(--accent);
+        }
+    }
+
+    // Всплывающая линия под ссылками
+    a {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            // background: rgba(255, 255, 255, 254);
+            transition: all 0.2s ease-in;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+}
+
+.sub-nav__item {
+
+}
+
+.sub-nav__link {
+
+}

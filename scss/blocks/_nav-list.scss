@@ -1,0 +1,81 @@
+.nav-list {
+    align-self: center;
+    justify-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+
+    font-weight: 500;
+    font-size: 18px;
+
+    @include tablet() {
+        display: none;
+    }
+}
+    
+
+.nav-list__item {
+    position: relative;
+    padding: 10px;
+}
+
+.nav-list__link {
+    transition: opacity 0.1s ease-in;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &--dropdown {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+
+        &::after {
+            content: url(/picture/picture-icons/eva_arrow-ios-back-outline.svg);
+            height: 18px;
+        }
+        }
+}
+
+.nav-list__sub-nav {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: calc(100%);
+
+    transform: translate(0%, 10%);
+    transition: all 0.2s ease-in;
+}
+
+.nav-list__item:hover .nav-list__sub-nav {
+    pointer-events: all;
+    opacity: 1;
+    transform: translate(0%,0%);
+}
+
+// Всплывающая линия под ссылками
+.nav-list a {
+position: relative;
+}
+
+.nav-list a::before {
+    // Всплывающая линия под ссылками
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    // background: rgba(255, 255, 255, 254);
+    transition: all 0.2s ease-in;
+}
+
+.nav-list a:hover::before{
+    width: 100%;
+}
+

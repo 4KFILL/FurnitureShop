@@ -1,0 +1,105 @@
+.mobile-nav-wrapper {
+    display: none;
+
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+
+    padding: 30px 30px;
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+
+    a {
+        color: var(--footer-text-color);
+
+        &:hover {
+            color: var(--footer-text-color);
+            transition: color 0.2s ease-in;
+        }
+    }
+
+    &--open {
+        display: block;
+    }
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.mobile-cart {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    flex-grow: 1;
+    padding-right: 20px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.2);;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+// Nav
+
+.mobile-nav {
+    display: grid;
+    gap: 20px;
+    font-size: 18px;
+    a:active {
+        color: var(--accent);
+    }
+}
+
+.mobile-nav__item {
+}
+
+.mobile-nav__link {
+    &--droplist {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+
+        &::after {
+            content: url(/picture/picture-icons/eva_arrow-ios-back-outline.svg);
+            height: 18px;
+        }
+        }
+}
+
+.mobile-nav__link--dropdown {
+
+}
+
+// Sub nav
+
+.mobile-sub-nav {
+    padding: 20px 0 0 20px;
+
+    display: grid;
+    gap: 14px;
+    font-size: 16px;
+}
+
+.mobile-sub-nav__item {
+
+}
+
+.mobile-sub-nav__link {
+
+}
+
+.mobile-nav_item {
+
+}
